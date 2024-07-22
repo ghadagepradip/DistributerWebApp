@@ -10,8 +10,38 @@
   	<description></description>
   	<servlet-class>org.app.controller.ValidateServlet</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>VendorController</servlet-name>
+  	<display-name>VendorController</display-name>
+  	<description></description>
+  	<servlet-class>org.app.controller.VendorController</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>DeleteVendor</servlet-name>
+  	<display-name>DeleteVendor</display-name>
+  	<description></description>
+  	<servlet-class>org.app.controller.DeleteVendor</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>UpdateVendor</servlet-name>
+  	<display-name>UpdateVendor</display-name>
+  	<description></description>
+  	<servlet-class>org.app.controller.UpdateVendor</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>ValidateServlet</servlet-name>
   	<url-pattern>/Validate</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>VendorController</servlet-name>
+  	<url-pattern>/savevendor</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DeleteVendor</servlet-name>
+  	<url-pattern>/delvend</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UpdateVendor</servlet-name>
+  	<url-pattern>/updatevendor</url-pattern>
   </servlet-mapping>
 </web-app>

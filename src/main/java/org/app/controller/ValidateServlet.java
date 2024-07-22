@@ -5,6 +5,7 @@ import java.io.PrintWriter;
 
 import org.app.service.*;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -32,8 +33,8 @@ public class ValidateServlet extends HttpServlet {
 		model=validateservice.isValidate(model);
 		if(model.getLogintype().equals("super admin"))
 		{
-			//dashboard
-			out.println("dashboard for super admin");
+			RequestDispatcher r=request.getRequestDispatcher("superadmin.jsp");
+			r.forward(request, response);
 		}
 		else if(model.getLogintype().equals("employee"))
 		{
